@@ -1,0 +1,36 @@
+{
+    "name": "GyazzSlide",
+    "short_name": "GyazzSlide",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Gyazzのスライド",
+
+    "applications": {
+	"gecko": {
+	    "id": "gyazzslide@pitecan.com",
+	    "strict_min_version": "45.0"
+	}
+    },
+
+    "browser_action": {
+	"default_icon": "icons/gyazzslide-48.png"
+    },
+    
+    "icons": {
+	"48": "icons/gyazzslide-48.png",
+	"96": "icons/gyazzslide-96.png"
+    },
+
+    "background": {
+	"scripts": ["slide_bg.js"]
+    },
+
+    "content_scripts": [
+	{
+	    "matches": ["*://*/*"],
+	    "js": ["slide.js"],
+	    "run_at": "document_idle"
+	}
+    ]
+}
+
