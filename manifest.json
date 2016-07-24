@@ -27,7 +27,7 @@
 
     "content_scripts": [
 	{
-	    "matches": ["*://*/*"],
+	    "matches": ["https://gyazz-clone.herokuapp.com/*"],
 	    "js": ["slide.js"],
 	    "run_at": "document_idle"
 	}
